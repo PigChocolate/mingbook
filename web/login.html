@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>图书借记系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script language="javascript" src="Js/jquery-3.3.1.min.js"></script>
+    <script language="JavaScript">
+        //1.当文档加载完毕,调用jquery
+        $(function () {
+            //2.执行图片点击事件
+           $("#code").click(function () {
+               //3.设置图片的src属性,注意需要添加随机数
+               $(this).prop("src","code.let?id="+Math.random());
+           });
+        });
+    </script>
+</head>
+    <body background="Images/lib.jpg">
+        <form id="fmLogin" method="post" action="user.let?type=login" >
+            <table align="center">
+                <tr><td colspan="2"><h4 style="letter-spacing:1px;font-size:44px;">图书借记系统</h4></td></tr>
+                <tr><td>管理员：</td><td><input type="text" name="name"></td></tr>
+                <tr><td>密&nbsp;&nbsp;&nbsp;&nbsp;码：</td><td><input type="password" name="pwd" value="123"></td></tr>
+                <tr><td>验证码：</td><td style="position: relative;"><input type="text" name="valcode" value="" style="width:60px;">&nbsp;<img id="code" src="code.let" style="position: absolute; top:2px;"></td></tr>
+                <tr class="bt"><td>&nbsp;</td><td><input type="submit" value="登录" />&nbsp;<input type="reset" value="重填"></td></tr>
+            </table>
+        </form>
+    </body>
+</html>
