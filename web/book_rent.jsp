@@ -8,7 +8,6 @@
     <script>
         /**
          * 获取系统的当前时间
-         *  2021-02-12
          **/
         function getCurrentDate(){
             var dateObj = new Date();
@@ -21,8 +20,6 @@
         /**
          * 获取归还时间
          * count:借阅时间
-         * 2012-12-1 : 20
-         * 2012-12-21:归还
          * 毫秒: 1s = 1000ms   1m = 60s   1h= 60m   1d = 24h
          *
          * */
